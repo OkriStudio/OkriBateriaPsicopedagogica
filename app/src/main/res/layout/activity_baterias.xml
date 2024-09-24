@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Baterias">
+
+    <TextView
+        android:id="@+id/bateriasTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Baterias"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/bateriasTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/bateriasList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Botones para cada batería de Grado 1 al 8 -->
+            <Button
+                android:id="@+id/buttonGrade1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bateria de Grado 1"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/buttonGrade2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bateria de Grado 2"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/buttonGrade3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bateria de Grado 3"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/buttonGrade4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bateria de Grado 4"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/buttonGrade5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bateria de Grado 5"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/buttonGrade6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bateria de Grado 6"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/buttonGrade7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bateria de Grado 7"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/buttonGrade8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bateria de Grado 8"
+                android:layout_marginBottom="8dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonReviewBaterias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Revisar Baterias"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
