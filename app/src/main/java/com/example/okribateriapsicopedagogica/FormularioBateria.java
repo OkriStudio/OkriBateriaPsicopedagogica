@@ -38,13 +38,13 @@ public class FormularioBateria extends AppCompatActivity {
         // Inicializar el HashMap para guardar los resultados
         alumnos = new HashMap<>();
 
-        // Configurar el Spinner
+        // Configurar el Spinner y array de los cursos
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.courses_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCurso.setAdapter(adapter);
 
-        // Manejar el botón de envío
+
         buttonEnviar.setOnClickListener(view -> {
             String nombre = editTextNombre.getText().toString();
             String rut = editTextRUT.getText().toString();
@@ -55,10 +55,10 @@ public class FormularioBateria extends AppCompatActivity {
                 return;
             }
 
-            // Obtener el curso seleccionado
+
             String curso = spinnerCurso.getSelectedItem().toString();
 
-            // Guardar la información en el diccionario
+
             HashMap<String, String> infoAlumno = new HashMap<>();
             infoAlumno.put("nombre", nombre);
             infoAlumno.put("rut", rut);
@@ -68,7 +68,7 @@ public class FormularioBateria extends AppCompatActivity {
 
             alumnos.put(rut, infoAlumno);
 
-            // Crear Intent para pasar los datos a la actividad de tabla
+
             Intent intent = new Intent(FormularioBateria.this, TablaBaterias.class);
             intent.putExtra("alumnos", alumnos);
             startActivity(intent);
@@ -95,10 +95,10 @@ public class FormularioBateria extends AppCompatActivity {
 
         switch (respuesta) {
             case "A":
-                return 3; // respuesta correcta
+                return 3;
             case "B":
             case "C":
-                return 1; // respuesta incorrecta
+                return 1;
             default:
                 return 0;
         }

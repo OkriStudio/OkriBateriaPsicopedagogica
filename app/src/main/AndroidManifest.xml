@@ -13,6 +13,18 @@
         android:theme="@style/Theme.OkriBateriaPsicopedagogica"
         tools:targetApi="31">
         <activity
+            android:name=".Notificaciones"
+            android:exported="false" />
+        <activity
+            android:name=".Chat"
+            android:exported="false" />
+        <activity
+            android:name=".MensajesChat"
+            android:exported="false" />
+        <activity
+            android:name=".ForoAlumnos"
+            android:exported="false" />
+        <activity
             android:name=".TablaBaterias"
             android:exported="false" />
         <activity

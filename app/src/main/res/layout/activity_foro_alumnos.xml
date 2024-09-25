@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@android:color/white">
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/noticia1" />
+
+    <TextView
+        android:id="@+id/tituloNoticia1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Día del Deporte en la Escuela"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/descripcionNoticia1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Se celebró el día del deporte con diversas actividades en la escuela."
+        android:layout_marginBottom="16dp" />
+
+    <!-- Segunda noticia -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/noticia2" />
+
+    <TextView
+        android:id="@+id/tituloNoticia2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nueva Biblioteca Escolar"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/descripcionNoticia2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inauguramos la nueva biblioteca con más de 500 libros para los alumnos."
+        android:layout_marginBottom="16dp" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/noticia3" />
+
+    <TextView
+        android:id="@+id/tituloNoticia3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Visita de Científicos"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/descripcionNoticia3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Un grupo de científicos visitó la escuela para hablar sobre la ciencia en el día a día."
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>

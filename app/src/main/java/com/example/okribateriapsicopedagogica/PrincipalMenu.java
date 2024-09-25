@@ -22,24 +22,26 @@ public class PrincipalMenu extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_principal_menu);
 
-        // Configurar insets para bordes
+        // borde
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        // Referencia al botón flotante
+        // botón flotante
         FloatingActionButton fab = findViewById(R.id.floatingActionButton);
 
-        // Referencias a las opciones
+        // las opciones
         Button option1 = findViewById(R.id.option1);
         Button option2 = findViewById(R.id.option2);
         Button option3 = findViewById(R.id.option3);
         Button option4 = findViewById(R.id.option4);
         Button option5 = findViewById(R.id.option5);
+        Button option6= findViewById(R.id.option6);
+        Button option7 = findViewById(R.id.option7);
 
-        // Listener para el botón flotante
+        //botón flotante
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +52,8 @@ public class PrincipalMenu extends AppCompatActivity {
                     option3.setVisibility(View.GONE);
                     option4.setVisibility(View.GONE);
                     option5.setVisibility(View.GONE);
+                    option6.setVisibility(View.GONE);
+                    option7.setVisibility(View.GONE);
                 } else {
                     // Mostrar las opciones
                     option1.setVisibility(View.VISIBLE);
@@ -57,26 +61,28 @@ public class PrincipalMenu extends AppCompatActivity {
                     option3.setVisibility(View.VISIBLE);
                     option4.setVisibility(View.VISIBLE);
                     option5.setVisibility(View.VISIBLE);
+                    option6.setVisibility(View.VISIBLE);
+                    option7.setVisibility(View.VISIBLE);
                 }
                 // Cambiar el estado
                 isOptionsVisible = !isOptionsVisible;
             }
         });
-        // Listener para el botón 1 (option1) que lleva a la segunda actividad
+
         option1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Iniciar la SecondActivity
-                Intent intent = new Intent(PrincipalMenu.this, RegistrarCuenta.class);
+
+                Intent intent = new Intent(PrincipalMenu.this, PrincipalMenu.class);
                 startActivity(intent);
             }
         });
-        // Listener para el botón 2 (option2) que lleva al Forum
+
         option2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Iniciar la SecondActivity
-                Intent intent = new Intent(PrincipalMenu.this, FormularioBateria.class);
+
+                Intent intent = new Intent(PrincipalMenu.this, ForoAlumnos.class);
                 startActivity(intent);
             }
         });
@@ -85,8 +91,8 @@ public class PrincipalMenu extends AppCompatActivity {
         option3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Iniciar la SecondActivity
-                Intent intent = new Intent(PrincipalMenu.this, TablaBaterias.class);
+
+                Intent intent = new Intent(PrincipalMenu.this, FormularioBateria.class);
                 startActivity(intent);
             }
         });
@@ -94,11 +100,20 @@ public class PrincipalMenu extends AppCompatActivity {
         option4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Iniciar la SecondActivity
-                Intent intent = new Intent(PrincipalMenu.this, PrincipalMenu.class);
+
+                Intent intent = new Intent(PrincipalMenu.this, ForoAlumnos.class);
                 startActivity(intent);
             }
         });
+        option5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(PrincipalMenu.this, ForoAlumnos.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

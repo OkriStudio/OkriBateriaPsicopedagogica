@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".PrincipalMenu">
 
-    <!-- Botón flotante -->
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
@@ -20,56 +20,75 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_launcher_background" />
 
-    <!-- Opción 1 -->
+
     <Button
         android:id="@+id/option1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Registrar Alumno"
+        android:text="Inicio"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/floatingActionButton"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="16dp" />
 
-    <!-- Opción 2 -->
+
     <Button
         android:id="@+id/option2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Forum"
+        android:text="Registrar Alumno y Tabla"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/option1"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="16dp" />
 
-    <!-- Opción 3 -->
+
     <Button
         android:id="@+id/option3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Opción 3"
+        android:text="Baterias y tabla"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/option2"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="16dp" />
 
-    <!-- Opción 4 -->
+
     <Button
         android:id="@+id/option4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Opción 4"
+        android:text="Registrar y tabla"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/option3"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="16dp" />
 
-    <!-- Opción 5 -->
+
     <Button
         android:id="@+id/option5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Opción 5"
+        android:text="Perfil Alumno"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/option4"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/option6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chats y chat"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/option4"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+    <Button
+        android:id="@+id/option7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chat y chats"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/option4"
         app:layout_constraintEnd_toEndOf="parent"

@@ -26,7 +26,7 @@ public class Revision_tabla extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_revision_tabla);
 
-        // Obtener la lista de estudiantes desde la intención
+        // Obtener la lista de estudiantes
         studentsList = (ArrayList<HashMap<String, String>>) getIntent().getSerializableExtra("studentsList");
 
         tableLayout = findViewById(R.id.tableLayout);
@@ -36,7 +36,7 @@ public class Revision_tabla extends AppCompatActivity {
         // Mostrar los estudiantes en la tabla
         displayStudents(studentsList);
 
-        // Búsqueda
+
         searchButton.setOnClickListener(v -> {
             String query = searchEditText.getText().toString().toLowerCase();
             ArrayList<HashMap<String, String>> filteredList = new ArrayList<>();
@@ -57,7 +57,7 @@ public class Revision_tabla extends AppCompatActivity {
     private void displayStudents(ArrayList<HashMap<String, String>> list) {
         tableLayout.removeAllViews();
 
-        // Encabezados de la tabla
+
         TableRow headerRow = new TableRow(this);
         headerRow.addView(createTextView("Nombre"));
         headerRow.addView(createTextView("Apellido"));
@@ -66,7 +66,7 @@ public class Revision_tabla extends AppCompatActivity {
         headerRow.addView(createTextView("Curso"));
         tableLayout.addView(headerRow);
 
-        // Agregar filas para cada estudiante
+
         for (HashMap<String, String> student : list) {
             TableRow row = new TableRow(this);
             row.setBackgroundResource(R.drawable.table_row_background); // Fondo para cada fila

@@ -25,10 +25,10 @@ public class TablaBaterias extends AppCompatActivity {
         tableLayoutAlumnos = findViewById(R.id.tableLayoutAlumnos);
         searchBar = findViewById(R.id.searchBar);
 
-        // Recuperar el HashMap de alumnos pasado por el Intent
+
         alumnos = (HashMap<String, HashMap<String, String>>) getIntent().getSerializableExtra("alumnos");
 
-        // Mostrar todos los alumnos inicialmente
+
         mostrarAlumnos(alumnos);
 
         // Añadir un TextWatcher para el campo de búsqueda
@@ -49,7 +49,7 @@ public class TablaBaterias extends AppCompatActivity {
     private void mostrarAlumnos(HashMap<String, HashMap<String, String>> listaAlumnos) {
         tableLayoutAlumnos.removeAllViews(); // Limpiar la tabla antes de agregar filas nuevas
 
-        // Crear la fila de encabezado
+
         TableRow headerRow = new TableRow(this);
         headerRow.setBackgroundColor(getResources().getColor(R.color.Morado_500));
 
@@ -85,7 +85,7 @@ public class TablaBaterias extends AppCompatActivity {
 
         tableLayoutAlumnos.addView(headerRow);
 
-        // Añadir filas dinámicamente
+
         for (String rut : listaAlumnos.keySet()) {
             HashMap<String, String> infoAlumno = listaAlumnos.get(rut);
 

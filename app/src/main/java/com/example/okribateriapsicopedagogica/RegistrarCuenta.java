@@ -15,7 +15,7 @@ import java.util.HashMap;
 
 public class RegistrarCuenta extends AppCompatActivity {
 
-    // Lista estática para guardar todos los estudiantes
+    // Lista para guardar los estudiantes
     private static ArrayList<HashMap<String, String>> studentsList = new ArrayList<>();
 
     @Override

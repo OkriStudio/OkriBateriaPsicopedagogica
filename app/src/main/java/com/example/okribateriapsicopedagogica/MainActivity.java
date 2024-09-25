@@ -27,15 +27,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View V){
-        //Asignar valores de los labels
+
         EditText campo1=this.findViewById(R.id.editTextTextEmailAddress);
         EditText campo2=this.findViewById(R.id.editTextTextPassword);
-        //obtener valores de los compas asignandolos
+
         String correo=campo1.getText().toString();
         String contraseña=campo2.getText().toString();
 
         if(correo.equals("admin") && contraseña.equals("admin")){
-            //Asi se llama una ventana o activity desde un boton activando el on click
+
             Intent i= new Intent(this, PrincipalMenu.class);
             startActivity(i);
         }else{
