@@ -28,20 +28,21 @@ public class MainActivity extends AppCompatActivity {
 
     public void login(View V){
 
-        EditText campo1=this.findViewById(R.id.editTextTextEmailAddress);
-        EditText campo2=this.findViewById(R.id.editTextTextPassword);
+        EditText campo1 = this.findViewById(R.id.editTextTextEmailAddress);
+        EditText campo2 = this.findViewById(R.id.editTextTextPassword);
 
-        String correo=campo1.getText().toString();
-        String contraseña=campo2.getText().toString();
+        String correo = campo1.getText().toString();
+        String contraseña = campo2.getText().toString();
 
-        if(correo.equals("admin") && contraseña.equals("admin")){
-
-            Intent i= new Intent(this, PrincipalMenu.class);
+        if (correo.equals("admin") && contraseña.equals("admin")) {
+            Intent i = new Intent(this, PrincipalMenu.class);
             startActivity(i);
-        }else{
+        } else if (correo.equals("alumno") && contraseña.equals("123")) {
+            Intent o = new Intent(this, principal_menu2.class);
+            startActivity(o);
+        } else {
             Toast.makeText(this, "Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show();
         }
-
 
 
     }

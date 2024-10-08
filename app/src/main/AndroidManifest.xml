@@ -13,6 +13,15 @@
         android:theme="@style/Theme.OkriBateriaPsicopedagogica"
         tools:targetApi="31">
         <activity
+            android:name=".principal_menu2"
+            android:exported="false" />
+        <activity
+            android:name=".MenuPrincipalAlumnos"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".Notificaciones"
             android:exported="false" />
         <activity
@@ -22,7 +31,7 @@
             android:name=".MensajesChat"
             android:exported="false" />
         <activity
-            android:name=".ForoAlumnos"
+            android:name=".Foro_Alumnos"
             android:exported="false" />
         <activity
             android:name=".TablaBaterias"

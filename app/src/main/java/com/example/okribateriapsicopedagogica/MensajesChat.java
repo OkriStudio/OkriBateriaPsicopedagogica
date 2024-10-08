@@ -52,3 +52,4 @@ public class MensajesChat extends AppCompatActivity {
         startActivity(intent);
     }
 }
+

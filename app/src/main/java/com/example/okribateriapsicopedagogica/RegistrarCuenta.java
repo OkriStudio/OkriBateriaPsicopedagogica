@@ -1,5 +1,7 @@
 package com.example.okribateriapsicopedagogica;
 
+
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +18,7 @@ import java.util.HashMap;
 public class RegistrarCuenta extends AppCompatActivity {
 
     // Lista para guardar los estudiantes
-    private static ArrayList<HashMap<String, String>> studentsList = new ArrayList<>();
+    public static ArrayList<HashMap<String, String>> studentsList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,7 @@ public class RegistrarCuenta extends AppCompatActivity {
             Intent intent = new Intent(RegistrarCuenta.this, Revision_tabla.class);
             intent.putExtra("studentsList", studentsList);
             startActivity(intent);
+
         });
     }
 }

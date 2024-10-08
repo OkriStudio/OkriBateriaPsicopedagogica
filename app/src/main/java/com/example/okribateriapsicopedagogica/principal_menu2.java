@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.fragment.app.Fragment;
 
-public class PrincipalMenu extends AppCompatActivity {
+public class principal_menu2 extends AppCompatActivity {
 
     private boolean isOptionsVisible = false;
 
@@ -46,11 +46,11 @@ public class PrincipalMenu extends AppCompatActivity {
         findViewById(R.id.option2).setOnClickListener(v -> loadFragment(new registrar_alumno()));
         findViewById(R.id.option3).setOnClickListener(v -> loadFragment(new revision_alumnos()));
         findViewById(R.id.option5).setOnClickListener(v -> {
-            Intent intent = new Intent(PrincipalMenu.this, MensajesChat.class);
+            Intent intent = new Intent(principal_menu2.this, MensajesChat.class);
             startActivity(intent);
         });
         findViewById(R.id.option4).setOnClickListener(v -> {
-            Intent intent = new Intent(PrincipalMenu.this, Baterias.class);
+            Intent intent = new Intent(principal_menu2.this, Baterias.class);
             startActivity(intent);
         });
         findViewById(R.id.option6).setOnClickListener(v -> loadFragment(new notifiacion()));

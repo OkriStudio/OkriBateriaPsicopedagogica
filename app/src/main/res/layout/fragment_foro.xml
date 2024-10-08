@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="@android:color/white">
+
+    <!-- Contenido del fragmento (sin cambios) -->
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/noticia1" />
+
+    <TextView
+        android:id="@+id/tituloNoticia1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Día del Deporte en la Escuela"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/descripcionNoticia1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Se celebró el día del deporte con diversas actividades en la escuela."
+        android:layout_marginBottom="16dp" />
+
+    <!-- Repite para las otras noticias... -->
+</LinearLayout>

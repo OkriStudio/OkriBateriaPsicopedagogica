@@ -26,68 +26,18 @@
 
     <!-- Área de mensajes con Scroll -->
     <ScrollView
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:padding="8dp">
 
         <LinearLayout
+            android:id="@+id/layout_mensajes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <!-- Mensaje recibido -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="8dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="start"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/ic_launcher_foreground" />
-
-                <TextView
-                    android:id="@+id/mensaje_recibido"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:background="@color/material_dynamic_tertiary70"
-                    android:elevation="2dp"
-                    android:padding="12dp"
-                    android:text="Hola, ¿cómo estás?"
-                    android:textColor="@android:color/white" />
-            </LinearLayout>
-
-            <!-- Mensaje enviado -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="end"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:id="@+id/mensaje_enviado"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:background="@color/light_blue_100"
-                    android:elevation="2dp"
-                    android:padding="12dp"
-                    android:text="Todo bien, ¿y usted?"
-                    android:textColor="@android:color/white" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="end"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/ic_launcher_foreground" />
-            </LinearLayout>
+            <!-- Los mensajes se añadirán aquí desde el código -->
         </LinearLayout>
     </ScrollView>
 
