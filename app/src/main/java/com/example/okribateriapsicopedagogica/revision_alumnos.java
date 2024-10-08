@@ -1,6 +1,7 @@
 package com.example.okribateriapsicopedagogica;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,7 +59,10 @@ public class revision_alumnos extends Fragment {
             TableRow row = new TableRow(getActivity());
             row.setBackgroundResource(R.drawable.table_row_background);
             row.setOnClickListener(v -> {
-                Toast.makeText(getActivity(), "Seleccionado: " + student.get("nombre"), Toast.LENGTH_SHORT).show();
+                // Crear un Intent para ir a la PerfilActivity
+                Intent intent = new Intent(getActivity(), PerfilActivity.class);
+                intent.putExtra("studentInfo", student); // Pasar la información del estudiante
+                startActivity(intent);
             });
 
             row.addView(createTextView(student.get("nombre")));

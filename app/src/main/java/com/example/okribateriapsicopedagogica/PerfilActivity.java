@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,12 +22,12 @@ public class PerfilActivity extends AppCompatActivity {
     private Spinner genderSpinner;
     private Spinner batteryStatusSpinner;
     private Button saveButton;
+    private HashMap<String, String> studentInfo; // Variable para almacenar la info del estudiante
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
-
 
         nameTextView = findViewById(R.id.nameTextView);
         rutTextView = findViewById(R.id.rutTextView);
@@ -36,10 +37,8 @@ public class PerfilActivity extends AppCompatActivity {
         batteryStatusSpinner = findViewById(R.id.batteryStatusSpinner);
         saveButton = findViewById(R.id.saveButton);
 
-
-
-        HashMap<String, String> studentInfo = (HashMap<String, String>) getIntent().getSerializableExtra("studentInfo");
-
+        // Obtener información del estudiante
+        studentInfo = (HashMap<String, String>) getIntent().getSerializableExtra("studentInfo");
 
         if (studentInfo != null) {
             nameTextView.setText(studentInfo.get("nombre"));
@@ -48,22 +47,42 @@ public class PerfilActivity extends AppCompatActivity {
             courseTextView.setText(studentInfo.get("curso"));
         }
 
-
         setupSpinners();
 
-
         saveButton.setOnClickListener(v -> {
+            // Recoger los datos de los campos
+            String updatedName = nameTextView.getText().toString();
+            String updatedRut = rutTextView.getText().toString();
+            String updatedEmail = emailTextView.getText().toString();
+            String updatedCourse = courseTextView.getText().toString();
+            String selectedGender = genderSpinner.getSelectedItem().toString();
+            String selectedBatteryStatus = batteryStatusSpinner.getSelectedItem().toString();
 
+            // Guardar cambios en el repositorio
+            if (studentInfo != null) {
+                studentInfo.put("nombre", updatedName);
+                studentInfo.put("rut", updatedRut);
+                studentInfo.put("correo", updatedEmail);
+                studentInfo.put("curso", updatedCourse);
+                studentInfo.put("genero", selectedGender);
+                studentInfo.put("estadoBaterias", selectedBatteryStatus);
+
+                // Aquí podrías actualizar el repositorio o la base de datos si es necesario
+                StudentRepository.getInstance().updateStudent(studentInfo);
+
+                Toast.makeText(PerfilActivity.this, "Cambios guardados", Toast.LENGTH_SHORT).show();
+                finish(); // Cerrar la actividad
+            } else {
+                Toast.makeText(PerfilActivity.this, "Error al guardar cambios", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 
     private void setupSpinners() {
-
         ArrayAdapter<CharSequence> genderAdapter = ArrayAdapter.createFromResource(this,
                 R.array.gender_array, android.R.layout.simple_spinner_item);
         genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         genderSpinner.setAdapter(genderAdapter);
-
 
         ArrayAdapter<CharSequence> batteryAdapter = ArrayAdapter.createFromResource(this,
                 R.array.battery_status_array, android.R.layout.simple_spinner_item);

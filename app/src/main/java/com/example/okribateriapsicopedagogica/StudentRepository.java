@@ -25,4 +25,16 @@ public class StudentRepository {
     public void addStudent(HashMap<String, String> student) {
         studentsList.add(student);
     }
+
+    // Método para actualizar un estudiante
+    public void updateStudent(HashMap<String, String> updatedStudent) {
+        for (int i = 0; i < studentsList.size(); i++) {
+            HashMap<String, String> student = studentsList.get(i);
+            // Asumiendo que "rut" es el identificador único
+            if (student.get("rut").equals(updatedStudent.get("rut"))) {
+                studentsList.set(i, updatedStudent);
+                return; // Salir del método una vez actualizado
+            }
+        }
+    }
 }
